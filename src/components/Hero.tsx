@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 interface HeroProps {
   title?: string;
   subtitle?: string;
+  description?: string;
+  icon?: React.ReactNode;
   ctaText?: string;
   ctaLink?: string;
   backgroundImage?: string;
@@ -56,6 +58,8 @@ const RotatingText = () => {
 const Hero = ({
   title = "Visualize Your Building Assets in 3D",
   subtitle = "Powerful visualization tools for facility management and planning",
+  description,
+  icon,
   ctaText = "Book a Demo",
   ctaLink = "/contact",
   backgroundImage = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80",
@@ -138,7 +142,7 @@ const Hero = ({
             ) : (
               <div className="text-left">
                 {title ===
-                "Prevent Failures. Prove Compliance. Optimize Every Dollar." ? (
+                  "Prevent Failures. Prove Compliance. Optimize Every Dollar." ? (
                   <div>
                     <div className="whitespace-nowrap">
                       Prevent Failures. Prove Compliance.
